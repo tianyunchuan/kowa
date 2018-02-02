@@ -110,7 +110,7 @@ df=pd.concat([url,nickname,info],axis=1,ignore_index=True)
 df.columns=['url_hy','nickname','info']
 
 #       导出至mysql
-yconnect = create_engine('mysql+mysqldb://root:Tt65212879@rm-uf675p1vvls0t85vko.mysql.rds.aliyuncs.com:3306/dzdp?charset=utf8')
+yconnect = create_engine('mysql+mysqldb://root:T0000009@rm-uf675p1vvls0t85vko.mysql.rds.aliyuncs.com:3306/dzdp?charset=utf8')
 pd.io.sql.to_sql(df,'dz_meijia_hy_sh', yconnect, schema='dzdp', if_exists='append',index=False)
 
 #       导出单个pickle临时留档   
